@@ -1,0 +1,131 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #55AD9B, #D8EFD3);
+}
+
+.app {
+    padding: 10px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    max-width: 540px;
+    border-radius: 10px;
+}
+
+.app h2 {
+    color: #3d5542;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.app h2 img {
+    width: 35px;
+    margin-left: 10px;
+}
+
+.write {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d8efd391;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    padding: 4px;
+}
+.write input {
+    border: none;
+    background: transparent;
+    padding: 4px 10px;
+    cursor: pointer;
+    outline: none;
+    font-size: 17px;
+    flex: 1;
+}
+.write button {
+    background-color: #55AD9B;
+    border: none;
+    padding: 2px 20px;
+    border-radius: 18px;
+    font-size: 15px;
+    color: aliceblue;
+}
+
+.write button:hover {
+    background-color: #418679;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    margin-bottom: 5px;
+}
+
+.task p { 
+    line-height: 30px;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    flex: 1;
+}
+
+.task p::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: 9%;
+    margin-top: 7px;
+}
+
+.task p.cheked {
+    color: #5d615e;
+    text-decoration: line-through;
+}
+
+.task p.cheked::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(./images/check_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.png);
+    background-size: cover;
+    background-position: center;
+    left: 9%;
+    margin-top: 7px;
+    background-color: #d0e4cc;
+} 
+ 
+.delete , .edit{
+    color: #5d615e;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.delete{background-color: rgb(238, 200, 175);}
+.edit{background-color: hsl(50, 65%, 81%);}
+.delete:hover{background-color: rgb(211, 173, 147);}
+.edit:hover{background-color: rgb(221, 210, 161);}
+.task:hover{
+    background-color: #dbf5f079;
+    border-radius: 7px;
+    padding:3px;
+    box-shadow: 1px 1px 3px rgb(211, 226, 226);
+}
